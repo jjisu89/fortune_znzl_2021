@@ -4,9 +4,9 @@ import './About.css';
 function About() {
   return (
     <div className="about__container">
-      <span>
-        잘 하고 있어.
-      </span>
+          <span>
+              잘 하고 있어.
+          </span>
     </div>
   );
 }

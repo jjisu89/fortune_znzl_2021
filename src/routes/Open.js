@@ -1,5 +1,6 @@
 import React from 'react';
 import './Open.css';
+import AdfitWebComponent from 'react-adfit-web-component'
 
 class Open extends React.Component {
   state = {
@@ -147,12 +148,35 @@ class Open extends React.Component {
       '자신의 의견을 표현하세요'
     ],
   };
+  componentDidMount() {
+    let ins = document.createElement('ins');
+    let scr = document.createElement('script');
+
+    ins.className = 'kakao_ad_area';
+    ins.style = "display:none; width:100%;";
+    scr.async = 'true';
+    scr.type = "text/javascript";
+    scr.src = "//t1.daumcdn.net/kas/static/ba.min.js";
+    ins.setAttribute('data-ad-width', '250');
+    ins.setAttribute('data-ad-height', '250');
+    ins.setAttribute('data-ad-unit', 'DAN-4caTuk25kjMalzo6');
+
+    document.querySelector('.adfit').appendChild(ins);
+    document.querySelector('.adfit').appendChild(scr);
+  }
   render() {
     const { messages } = this.state;
     return (
+      <>
+      <AdfitWebComponent adUnit="DAN-adqaX45x5k7vqTHy"/>
+      <h1> </h1>
       <div className="open__container">
-          {messages[Math.floor(Math.random() * 141)]}
-        </div>
+        {messages[Math.floor(Math.random() * 141)]}
+      </div>
+      <h1> </h1>
+      <AdfitWebComponent adUnit="DAN-4caTuk25kjMalzo6"/>
+      <div className="adfit" />
+      </>
     );
   }
 }
