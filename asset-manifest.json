@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/fortune_znzl_2021/static/css/main.4acbd879.chunk.css",
-    "main.js": "/fortune_znzl_2021/static/js/main.38d2608a.chunk.js",
-    "main.js.map": "/fortune_znzl_2021/static/js/main.38d2608a.chunk.js.map",
+    "main.css": "/fortune_znzl_2021/static/css/main.cd203fb3.chunk.css",
+    "main.js": "/fortune_znzl_2021/static/js/main.8a9f7e62.chunk.js",
+    "main.js.map": "/fortune_znzl_2021/static/js/main.8a9f7e62.chunk.js.map",
     "runtime-main.js": "/fortune_znzl_2021/static/js/runtime-main.1af4d509.js",
     "runtime-main.js.map": "/fortune_znzl_2021/static/js/runtime-main.1af4d509.js.map",
-    "static/js/2.cc04baaf.chunk.js": "/fortune_znzl_2021/static/js/2.cc04baaf.chunk.js",
-    "static/js/2.cc04baaf.chunk.js.map": "/fortune_znzl_2021/static/js/2.cc04baaf.chunk.js.map",
+    "static/js/2.c162b5de.chunk.js": "/fortune_znzl_2021/static/js/2.c162b5de.chunk.js",
+    "static/js/2.c162b5de.chunk.js.map": "/fortune_znzl_2021/static/js/2.c162b5de.chunk.js.map",
     "index.html": "/fortune_znzl_2021/index.html",
-    "static/css/main.4acbd879.chunk.css.map": "/fortune_znzl_2021/static/css/main.4acbd879.chunk.css.map",
-    "static/js/2.cc04baaf.chunk.js.LICENSE.txt": "/fortune_znzl_2021/static/js/2.cc04baaf.chunk.js.LICENSE.txt"
+    "static/css/main.cd203fb3.chunk.css.map": "/fortune_znzl_2021/static/css/main.cd203fb3.chunk.css.map",
+    "static/js/2.c162b5de.chunk.js.LICENSE.txt": "/fortune_znzl_2021/static/js/2.c162b5de.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1af4d509.js",
-    "static/js/2.cc04baaf.chunk.js",
-    "static/css/main.4acbd879.chunk.css",
-    "static/js/main.38d2608a.chunk.js"
+    "static/js/2.c162b5de.chunk.js",
+    "static/css/main.cd203fb3.chunk.css",
+    "static/js/main.8a9f7e62.chunk.js"
   ]
 }
