@@ -6,6 +6,7 @@ import Open from './routes/Open';
 import Home from './routes/Home';
 import Navigation from './components/Navigation';
 import Detail from './routes/Detail';
+import Foryou from './routes/Foryou';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navigation />
       <Route path="/" exact={true} component={Home} />
       <Route path="/open" component={Open} />
+      <Route path="/foryou" component={Foryou} />
       <Route path="/about" component={About} />
       <Route path="/movie-detail" component={Detail} />
     </HashRouter>

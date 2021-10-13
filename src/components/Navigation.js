@@ -7,6 +7,7 @@ function Navigation() {
     <div className="nav">
       <Link to="/">Home</Link>
       <Link to="/open">Open</Link>
+      <Link to="/foryou">For you</Link>
       <Link to="/about">About</Link>
     </div>
   );
