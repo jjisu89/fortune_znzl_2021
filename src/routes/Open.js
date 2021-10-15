@@ -174,7 +174,7 @@ class Open extends React.Component {
         {messages[Math.floor(Math.random() * 141)]}
       </div>
       <h1> </h1>
-      <AdfitWebComponent adUnit="DAN-4caTuk25kjMalzo6"/>
+      {/* <AdfitWebComponent adUnit="DAN-4caTuk25kjMalzo6"/> */}
       <div className="adfit" />
       </>
     );
