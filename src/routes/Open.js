@@ -164,6 +164,7 @@ class Open extends React.Component {
     document.querySelector('.adfit').appendChild(ins);
     document.querySelector('.adfit').appendChild(scr);
   }
+  
   render() {
     const { messages } = this.state;
     return (

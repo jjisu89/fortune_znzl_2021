@@ -152,6 +152,7 @@ class Foryou extends React.Component {
   };
 
   componentDidMount() {
+
     var that = this;
     var date = new Date().getDate(); //Current Date
     var month = new Date().getMonth() + 1; //Current Month
@@ -161,10 +162,56 @@ class Foryou extends React.Component {
       date:
         date + month + year,
     });
+    const { messages, messages_len, user_info, user_info_len } = this.state;
+
+    window.Kakao.init('d24648a3a619d4d3c5a3232f29182174');
+
+    window.Kakao.Link.createDefaultButton({
+      container: '#kakao-link-btn',
+      objectType: 'feed',
+      content: {
+        title: '오늘의 포춘쿠키',
+        description: messages[(parseInt(user_info.substring(0, Math.floor(user_info_len/4)))
+          +parseInt(user_info.substring(Math.floor(user_info_len/4), Math.floor(user_info_len/4)*2))
+          +parseInt(user_info.substring(Math.floor(user_info_len/4)*2, Math.floor(user_info_len/4)*2)*3)
+          +parseInt(user_info.substring(Math.floor(user_info_len/4)*3, user_info_len))
+          +this.state.date) % messages_len],
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Fortune_cookie.png',
+        link: {
+          mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
+          webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open'
+        }
+      },
+      social: {
+        likeCount: 2020,
+        commentCount: 11,
+        sharedCount: 7
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
+            webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open'
+          }
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
+            webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open'
+          }
+        }
+      ]
+    });
+  }
+  onClickKakao = () => {
+    window.open('https://sharer.kakao.com/talk/friends/picker/link')
   }
 
   render() {
     const { messages, messages_len, user_info, user_info_len } = this.state;
+    
     return (
       <>
       <h1> </h1>
@@ -177,6 +224,7 @@ class Foryou extends React.Component {
         +parseInt(user_info.substring(Math.floor(user_info_len/4)*2, Math.floor(user_info_len/4)*2)*3)
         +parseInt(user_info.substring(Math.floor(user_info_len/4)*3, user_info_len))
         +this.state.date) % messages_len]}
+        <button id="kakao-link-btn" onClick={this.onClickKakao}><img src='https://mblogthumb-phinf.pstatic.net/MjAxODAyMDJfMTA5/MDAxNTE3NTAyODA4ODAz.pfFBh3N_7cDEfgp925XW22NJgDO2-2_CdhjOOJsaqjog.YUrOiE5xseldfEb3R9_y8LMPuy8o4ml5JCqLHi1yHGgg.PNG.marketstory24/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1_%EB%A1%9C%EA%B3%A0_4.png?type=w800' alt="kakao" /></button>
       </div>
       <h1> </h1>
       </>
