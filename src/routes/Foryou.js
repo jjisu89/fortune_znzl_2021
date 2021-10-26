@@ -3,7 +3,7 @@ import './Foryou.css';
 
 class Foryou extends React.Component {
   state = {
-    messages: [
+    today_msg: [
       '오늘은 행운이 가득한 날입니다',
       '다른 사람의 말을 잘 들어야 합니다',
       '당신은 지금 자신의 능력을 보여줄 준비가 되어 있습니다',
@@ -145,37 +145,37 @@ class Foryou extends React.Component {
       '당신은 지금 아주 중요한 시기를 보내고 있습니다',
       '당신이 바라던 일이 곧 이루어질 것입니다',
       '자신의 의견을 표현하세요'
-    ],
-    messages_len: 141,
-    user_info: navigator.userAgent.replace(/[^0-9]/g,''),
-    user_info_len: navigator.userAgent.replace(/[^0-9]/g,'').length
+    ][(parseInt(navigator.userAgent.replace(/[^0-9]/g,'').substring(0, Math.floor(navigator.userAgent.replace(/[^0-9]/g,'').length/4)))
+      +parseInt(navigator.userAgent.replace(/[^0-9]/g,'').substring(Math.floor(navigator.userAgent.replace(/[^0-9]/g,'').length/4), Math.floor(navigator.userAgent.replace(/[^0-9]/g,'').length/4)*2))
+      +parseInt(navigator.userAgent.replace(/[^0-9]/g,'').substring(Math.floor(navigator.userAgent.replace(/[^0-9]/g,'').length/4)*2, Math.floor(navigator.userAgent.replace(/[^0-9]/g,'').length/4)*2)*3)
+      +parseInt(navigator.userAgent.replace(/[^0-9]/g,'').substring(Math.floor(navigator.userAgent.replace(/[^0-9]/g,'').length/4)*3, navigator.userAgent.replace(/[^0-9]/g,'').length))
+      +(new Date().getDate())+ (new Date().getMonth() + 1)+(new Date().getFullYear()) )% 141]
   };
 
   componentDidMount() {
 
-    var that = this;
-    var date = new Date().getDate(); //Current Date
-    var month = new Date().getMonth() + 1; //Current Month
-    var year = new Date().getFullYear(); //Current Year
-    that.setState({
-      //Setting the value of the date time
-      date:
-        date + month + year,
-    });
-    const { messages, messages_len, user_info, user_info_len } = this.state;
+    // var that = this;
+    // var date = new Date().getDate(); //Current Date
+    // var month = new Date().getMonth() + 1; //Current Month
+    // var year = new Date().getFullYear(); //Current Year
+    // that.setState({
+    //   //Setting the value of the date time
+    //   date:
+    //     date + month + year,
+    // });
 
-    window.Kakao.init('d24648a3a619d4d3c5a3232f29182174');
+    const { today_msg } = this.state;
+    
+    window.Kakao.init('d24648a3a619d4d3c5a3232f29182174')
+    console.log('initialize check');
+    console.log(window.Kakao.isInitialized());
 
     window.Kakao.Link.createDefaultButton({
       container: '#kakao-link-btn',
       objectType: 'feed',
       content: {
         title: '오늘의 포춘쿠키',
-        description: messages[(parseInt(user_info.substring(0, Math.floor(user_info_len/4)))
-          +parseInt(user_info.substring(Math.floor(user_info_len/4), Math.floor(user_info_len/4)*2))
-          +parseInt(user_info.substring(Math.floor(user_info_len/4)*2, Math.floor(user_info_len/4)*2)*3)
-          +parseInt(user_info.substring(Math.floor(user_info_len/4)*3, user_info_len))
-          +this.state.date) % messages_len],
+        description: today_msg,
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Fortune_cookie.png',
         link: {
           mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
@@ -210,8 +210,8 @@ class Foryou extends React.Component {
   }
 
   render() {
-    const { messages, messages_len, user_info, user_info_len } = this.state;
-    
+    const { today_msg } = this.state;
+
     return (
       <>
       <h1> </h1>
@@ -219,11 +219,7 @@ class Foryou extends React.Component {
         {messages[Math.floor(Math.random() * messages_len)]}
       </div> */}
       <div className="foryou__container">
-        {messages[(parseInt(user_info.substring(0, Math.floor(user_info_len/4)))
-        +parseInt(user_info.substring(Math.floor(user_info_len/4), Math.floor(user_info_len/4)*2))
-        +parseInt(user_info.substring(Math.floor(user_info_len/4)*2, Math.floor(user_info_len/4)*2)*3)
-        +parseInt(user_info.substring(Math.floor(user_info_len/4)*3, user_info_len))
-        +this.state.date) % messages_len]}
+        {today_msg}
         <button id="kakao-link-btn" onClick={this.onClickKakao}><img src='https://mblogthumb-phinf.pstatic.net/MjAxODAyMDJfMTA5/MDAxNTE3NTAyODA4ODAz.pfFBh3N_7cDEfgp925XW22NJgDO2-2_CdhjOOJsaqjog.YUrOiE5xseldfEb3R9_y8LMPuy8o4ml5JCqLHi1yHGgg.PNG.marketstory24/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1_%EB%A1%9C%EA%B3%A0_4.png?type=w800' alt="kakao" /></button>
       </div>
       <h1> </h1>
