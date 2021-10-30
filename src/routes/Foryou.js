@@ -176,17 +176,18 @@ class Foryou extends React.Component {
       content: {
         title: '오늘의 포춘쿠키',
         description: today_msg,
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Fortune_cookie.png',
+        // imageUrl: "https://drive.google.com/uc?id=1ECmJQEyJsH_Q-tFzr81X0TovVFfAk4dW",
+        imageUrl: "https://mblogthumb-phinf.pstatic.net/MjAyMTEwMzBfNjIg/MDAxNjM1NTg2MTkwMDkw.Gsiz4UCtbSsvyAKqtJp34BbXFQT3oALVSy5yqIT7RGQg.m1kdAV001TKx2wQj5OqHNvdODBL0INF8xZqJfB7F96Mg.JPEG.bbanzzac0427/PNG_image-CB479C1D8F88-1.jpg?type=w800",
         link: {
           mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
           webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open'
         }
       },
-      social: {
-        likeCount: 2020,
-        commentCount: 11,
-        sharedCount: 7
-      },
+      // social: {
+      //   likeCount: 2020,
+      //   commentCount: 11,
+      //   sharedCount: 7
+      // },
       buttons: [
         {
           title: '웹으로 보기',
@@ -194,14 +195,14 @@ class Foryou extends React.Component {
             mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
             webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open'
           }
-        },
-        {
-          title: '앱으로 보기',
-          link: {
-            mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
-            webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open'
-          }
-        }
+        } //,
+        // {
+        //   title: '앱으로 보기',
+        //   link: {
+        //     mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
+        //     webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open'
+        //   }
+        // }
       ]
     });
   }
@@ -220,7 +221,8 @@ class Foryou extends React.Component {
       </div> */}
       <div className="foryou__container">
         {today_msg}
-        <button id="kakao-link-btn" onClick={this.onClickKakao}><img src='https://mblogthumb-phinf.pstatic.net/MjAxODAyMDJfMTA5/MDAxNTE3NTAyODA4ODAz.pfFBh3N_7cDEfgp925XW22NJgDO2-2_CdhjOOJsaqjog.YUrOiE5xseldfEb3R9_y8LMPuy8o4ml5JCqLHi1yHGgg.PNG.marketstory24/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1_%EB%A1%9C%EA%B3%A0_4.png?type=w800' alt="kakao" /></button>
+        <br/>
+        <button id="kakao-link-btn" onClick={this.onClickKakao} ><img src='https://app.stopbook.com/images/img-sub/btn-att-kak.png' alt="kakao" className="photo45240"/></button>
       </div>
       <h1> </h1>
       </>
