@@ -1,6 +1,17 @@
 import React from 'react';
 import './Foryou.css';
 
+import styled from "styled-components";
+import kakaoLogo from "./small_circle_kakao_logo.png";
+const KakaoShareButton = styled.a`
+    cursor: pointer;
+`;
+const KakaoIcon = styled.img`
+width: 48px;
+height: 48px;
+border-radius: 24px;
+`;
+
 class Foryou extends React.Component {
   state = {
     today_msg: [
@@ -221,10 +232,15 @@ class Foryou extends React.Component {
       </div> */}
       <div className="foryou__container">
         {today_msg}
-        <br/>
-        <button id="kakao-link-btn" onClick={this.onClickKakao} ><img src='https://app.stopbook.com/images/img-sub/btn-att-kak.png' alt="kakao" className="photo45240"/></button>
+        {/* <br/>
+        <button id="kakao-link-btn" onClick={this.onClickKakao} ><img src='https://app.stopbook.com/images/img-sub/btn-att-kak.png' alt="kakao" className="photo45240"/></button> */}
       </div>
       <h1> </h1>
+      <div class='center'> 
+        <KakaoShareButton id="kakao-link-btn" onClick={this.onClickKakao}>
+          <KakaoIcon src={kakaoLogo}></KakaoIcon>
+        </KakaoShareButton>
+      </div>
       </>
     );
   }
