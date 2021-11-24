@@ -9,7 +9,8 @@ class Home extends React.Component {
       id: 1,
       title: '포춘쿠키 칼로리는',
       summary: '378.1kcal',
-      poster: 'https://image.freepik.com/free-photo/fortune-cookie_144627-21540.jpg'
+      // poster: 'https://image.freepik.com/free-photo/fortune-cookie_144627-21540.jpg'
+      poster: "https://mblogthumb-phinf.pstatic.net/MjAyMTEwMzBfNjIg/MDAxNjM1NTg2MTkwMDkw.Gsiz4UCtbSsvyAKqtJp34BbXFQT3oALVSy5yqIT7RGQg.m1kdAV001TKx2wQj5OqHNvdODBL0INF8xZqJfB7F96Mg.JPEG.bbanzzac0427/PNG_image-CB479C1D8F88-1.jpg?type=w800"
     }],
   };
   render() {
