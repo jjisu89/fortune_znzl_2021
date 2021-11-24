@@ -201,10 +201,17 @@ class Foryou extends React.Component {
       // },
       buttons: [
         {
-          title: '웹으로 보기',
+          title: '랜덤 보기',
           link: {
             mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open',
             webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/open'
+          }
+        },
+        {
+          title: '내꺼 열기',
+          link: {
+            mobileWebUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/for_you',
+            webUrl: 'https://jjisu89.github.io/fortune_znzl_2021/#/for_you'
           }
         } //,
         // {
