@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fortune_znzl_2021/precache-manifest.02a8ef4f1fb5acb015c72f6ad42e7eba.js"
+  "/fortune_znzl_2021/precache-manifest.59bfaa6127c5705a603515a574e00b49.js"
 );
 
 self.addEventListener('message', (event) => {
