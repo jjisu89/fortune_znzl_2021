@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fortune_znzl_2021/static/css/main.e47811ee.chunk.css",
-    "main.js": "/fortune_znzl_2021/static/js/main.cf81b2f7.chunk.js",
-    "main.js.map": "/fortune_znzl_2021/static/js/main.cf81b2f7.chunk.js.map",
+    "main.js": "/fortune_znzl_2021/static/js/main.0b6dfa11.chunk.js",
+    "main.js.map": "/fortune_znzl_2021/static/js/main.0b6dfa11.chunk.js.map",
     "runtime-main.js": "/fortune_znzl_2021/static/js/runtime-main.f5adcd8a.js",
     "runtime-main.js.map": "/fortune_znzl_2021/static/js/runtime-main.f5adcd8a.js.map",
     "static/js/2.6791cbf0.chunk.js": "/fortune_znzl_2021/static/js/2.6791cbf0.chunk.js",
     "static/js/2.6791cbf0.chunk.js.map": "/fortune_znzl_2021/static/js/2.6791cbf0.chunk.js.map",
     "index.html": "/fortune_znzl_2021/index.html",
-    "precache-manifest.13c6c32ba9ffb4692e942da466dfe103.js": "/fortune_znzl_2021/precache-manifest.13c6c32ba9ffb4692e942da466dfe103.js",
+    "precache-manifest.e93471dc0e1f30a69ba8a1eef52be7c1.js": "/fortune_znzl_2021/precache-manifest.e93471dc0e1f30a69ba8a1eef52be7c1.js",
     "service-worker.js": "/fortune_znzl_2021/service-worker.js",
     "static/css/main.e47811ee.chunk.css.map": "/fortune_znzl_2021/static/css/main.e47811ee.chunk.css.map",
     "static/js/2.6791cbf0.chunk.js.LICENSE.txt": "/fortune_znzl_2021/static/js/2.6791cbf0.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f5adcd8a.js",
     "static/js/2.6791cbf0.chunk.js",
     "static/css/main.e47811ee.chunk.css",
-    "static/js/main.cf81b2f7.chunk.js"
+    "static/js/main.0b6dfa11.chunk.js"
   ]
 }
